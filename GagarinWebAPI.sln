@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GagarinWebAPI", "GagarinWebAPI\GagarinWebAPI.csproj", "{ECA0224C-6C61-402F-9C28-787046444DB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.Interfaces", "DataAccess.Interfaces\DataAccess.Interfaces.csproj", "{2609589C-6D5C-416D-82C6-D66167C0536F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Implementation", "DataAccess.Implementation\DataAccess.Implementation.csproj", "{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Entities", "0 Entities", "{67D30665-6C94-435D-BA46-51309A37A02E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 DataAccess.Interfaces", "1 DataAccess.Interfaces", "{BB631DB2-23F9-422A-8F50-9F73A2E1E93B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 UseCases", "2 UseCases", "{D0203E26-902A-452B-9AF6-442554A93643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 DataAccess.Implementation", "3 DataAccess.Implementation", "{2C633518-EE5B-44D1-B43B-8F3C52D0F3A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{616F88C1-476E-4A60-9274-DB96BE40E528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECA0224C-6C61-402F-9C28-787046444DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA0224C-6C61-402F-9C28-787046444DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA0224C-6C61-402F-9C28-787046444DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA0224C-6C61-402F-9C28-787046444DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2609589C-6D5C-416D-82C6-D66167C0536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2609589C-6D5C-416D-82C6-D66167C0536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2609589C-6D5C-416D-82C6-D66167C0536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2609589C-6D5C-416D-82C6-D66167C0536F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616F88C1-476E-4A60-9274-DB96BE40E528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616F88C1-476E-4A60-9274-DB96BE40E528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616F88C1-476E-4A60-9274-DB96BE40E528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616F88C1-476E-4A60-9274-DB96BE40E528}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEB44BAF-CD9C-43AE-AEBE-DD4E00CDE5C8} = {67D30665-6C94-435D-BA46-51309A37A02E}
+		{2609589C-6D5C-416D-82C6-D66167C0536F} = {BB631DB2-23F9-422A-8F50-9F73A2E1E93B}
+		{41ED8DF0-84D0-48CE-9CE2-3699D2FEA727} = {2C633518-EE5B-44D1-B43B-8F3C52D0F3A4}
+		{616F88C1-476E-4A60-9274-DB96BE40E528} = {D0203E26-902A-452B-9AF6-442554A93643}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99A1C324-6E0F-4B9D-A461-F329D8A0C352}
+	EndGlobalSection
+EndGlobal

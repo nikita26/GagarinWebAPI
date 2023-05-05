@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess.Interfaces\DataAccess.Interfaces.csproj" />
     <ProjectReference Include="..\WeatherProvider.Interfaces\WeatherProvider.Interfaces.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace DataAccess.Implementation
 {
@@ -11,5 +12,6 @@ namespace DataAccess.Implementation
         }
 
         public DbSet<Weather> Weathers { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -4,6 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a3550790-f7a7-4fce-be66-aa838395de0d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +21,8 @@
   <ItemGroup>
     <ProjectReference Include="..\DataAccess.Implementation\DataAccess.Implementation.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />
+    <ProjectReference Include="..\WeatherProvider.Implementation\WeatherProvider.Implementation.csproj" />
+    <ProjectReference Include="..\WeatherProvider.Interfaces\WeatherProvider.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

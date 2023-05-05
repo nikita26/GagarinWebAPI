@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UseCases;
 
 namespace GagarinWebAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api")]
     public class WeatherController : ControllerBase
@@ -19,15 +21,27 @@ namespace GagarinWebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult MoskowWeather(DateTime date)
+        [ProducesResponseType(StatusCodes.Status200OK,Type = typeof(double))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest,Type = typeof(string))]
+        public async Task<IActionResult> MoskowWeather(string date)
         {
-            return Ok();
+            var result = await _useCasesWeather.GetMoskowWeatherAsync(date);
+            if(result.IsError)
+                return BadRequest(result.ErrorMessage);
+
+            return Ok(result.Value);
         }
 
-        [HttpPut]
-        public IActionResult SaveMoskowWeather()
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(double))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public async Task<IActionResult> SaveMoskowWeather(string date)
         {
-            return BadRequest();
+            var result = await _useCasesWeather.SaveMoskowWeatherAsync(date);
+            if (result.IsError)
+                return BadRequest(result.ErrorMessage);
+
+            return StatusCode(201,result.Value);
         }
     }
 }

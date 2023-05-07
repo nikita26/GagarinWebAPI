@@ -1,5 +1,5 @@
 Аторизация
-User:Admin
-Password:Admin
+User:admin
+Password:admin
 
 Запуск контейнеров "docker-compose up"

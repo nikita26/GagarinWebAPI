@@ -8,7 +8,7 @@ namespace Entities
 {
     public class User : BaseEntity<long>
     {
-        public string Login {get;set;}
-        public string Password { get;set;}
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }

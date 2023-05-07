@@ -5,10 +5,10 @@ namespace UseCases
     public class OpenMeteoResponse
     {
         [JsonPropertyName("hourly")]
-        public Hourly Hourly { get; set; }
+        public Hourly? Hourly { get; set; }
 
         [JsonPropertyName("reason")]
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
 
         [JsonPropertyName("error")]
         public bool IsError { get; set; }
@@ -17,9 +17,9 @@ namespace UseCases
     public class Hourly
     {
         [JsonPropertyName("time")]
-        public DateTime[] Time { get; set; }
+        public DateTime[]? Time { get; set; }
 
         [JsonPropertyName("temperature_2m")]
-        public double[] Temperature { get; set;}
+        public double[]? Temperature { get; set;}
     }
 }

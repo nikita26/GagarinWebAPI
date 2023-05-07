@@ -11,7 +11,6 @@ namespace UseCases
     {
         private readonly IWeatherRepository _weatherRepository;
         private readonly IWeatherProvider _weatherProvider;
-        private readonly HttpClient _httpClient;
         public UseCasesWeather(IWeatherRepository weatherRepository,IWeatherProvider weatherProvider)
         {
             _weatherRepository = weatherRepository;

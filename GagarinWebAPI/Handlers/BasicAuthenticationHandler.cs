@@ -28,7 +28,7 @@ namespace GagarinWebAPI.Handlers
                 return AuthenticateResult.Fail("UnAuthorized");
 
             var authHeaderValue = AuthenticationHeaderValue.Parse(authHeader);
-            var userAuthValue = Encoding.UTF8.GetString(Convert.FromBase64String(authHeaderValue.Parameter)).Split(":");
+            var userAuthValue = Encoding.UTF8.GetString(Convert.FromBase64String(authHeaderValue.Parameter!)).Split(":");
             
             var authResult = await _useCasesAuthentication.AuthenticateUserAsync(userAuthValue[0], userAuthValue[1]);
             

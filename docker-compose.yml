@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  app:
+    container_name: gagarin_app
+    image: gagarin_app_image
+    restart: always
+    ports:
+      - "50050:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=postgre_db;Port=5432;Database=gagarin_db;Username=postgres;Password=postgrespw
+    networks:
+      - dev
+  
+  db:
+    container_name: postgre_db
+    image: postgres
+    restart: always
+    ports:
+      - "50051:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgrespw
+      - POSTGRES_DB=gagarin_db
+    networks:
+      - dev
+
+networks:
+  dev:
+    driver: bridge
+

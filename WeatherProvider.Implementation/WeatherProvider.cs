@@ -20,7 +20,7 @@ namespace WeatherProvider.Implementation
             var json = await response.Content.ReadAsStringAsync();
 
             var openMeteoResponse = JsonSerializer.Deserialize<OpenMeteoResponse>(json);
-            if (!openMeteoResponse.IsError)
+            if (!openMeteoResponse!.IsError)
                 return openMeteoResponse.Hourly.Temperature[12];
 
             return null;
